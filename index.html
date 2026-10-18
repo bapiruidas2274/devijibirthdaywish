@@ -374,7 +374,7 @@ p {
 .card h3 { font-size: 27px; color: var(--gold); }
 .card p { font-size: 12px; line-height: 1.9; }
 
-/* NEW PAGE 2: A LITTLE WORLD JUST FOR YOU */
+/* PAGE 2: A LITTLE WORLD JUST FOR YOU */
 #mountains.peace-page {
   isolation: isolate;
   overflow-x: hidden;
@@ -383,9 +383,7 @@ p {
     linear-gradient(180deg, #090b18 0%, #171a32 68%, #29223e 100%);
 }
 
-.peace-content {
-  width: min(650px, 100%);
-}
+.peace-content { width: min(650px, 100%); }
 
 .peace-moon {
   position: absolute;
@@ -480,10 +478,7 @@ p {
   filter: drop-shadow(0 0 12px #e7c68b33);
 }
 
-.peace-card-title {
-  font-size: 12px;
-  font-weight: 500;
-}
+.peace-card-title { font-size: 12px; font-weight: 500; }
 
 .peace-card-sub {
   color: #bcb5d0;
@@ -522,10 +517,7 @@ p {
   line-height: 1.7;
 }
 
-.message-sparkle {
-  color: var(--gold);
-  font-size: 20px;
-}
+.message-sparkle { color: var(--gold); font-size: 20px; }
 
 @keyframes peaceGlow {
   0%, 100% { box-shadow: 0 0 12px #c8b5ff05; }
@@ -633,9 +625,7 @@ p {
   line-height: 1.5;
 }
 
-.coffee-glow {
-  animation: coffeeGlow 1.2s ease;
-}
+.coffee-glow { animation: coffeeGlow 1.2s ease; }
 
 @keyframes coffeeGlow {
   0% { text-shadow: 0 0 0 transparent; transform: scale(.98); }
@@ -705,6 +695,154 @@ p {
 }
 
 .blessing-card p + p { margin-top: 12px; }
+
+/* NEW PAGE: DEVI JI'S SECRET KITKAT BREAK */
+#kitkat {
+  isolation: isolate;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 50% 35%, #6b302b 0%, transparent 52%),
+    linear-gradient(160deg, #160d19 0%, #321722 55%, #160e1c 100%);
+}
+
+.kitkat-content { width: min(650px, 100%); }
+
+.kitkat-glow {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #ff6b4520;
+  filter: blur(35px);
+  pointer-events: none;
+  animation: kitkatPulse 4s ease-in-out infinite;
+}
+
+@keyframes kitkatPulse {
+  0%, 100% { opacity: .5; transform: translateX(-50%) scale(.9); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.12); }
+}
+
+.kitkat-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.kitkat-sparkles span {
+  position: absolute;
+  color: #ffd8a0;
+  font-size: 23px;
+  animation: kitkatFloat 4s ease-in-out infinite;
+}
+
+.kitkat-sparkles span:nth-child(1) { top: 18%; left: 13%; }
+.kitkat-sparkles span:nth-child(2) { top: 32%; right: 12%; animation-delay: .8s; }
+.kitkat-sparkles span:nth-child(3) { top: 60%; left: 9%; animation-delay: 1.3s; }
+.kitkat-sparkles span:nth-child(4) { top: 65%; right: 10%; animation-delay: .5s; }
+.kitkat-sparkles span:nth-child(5) { top: 12%; right: 28%; animation-delay: 1.7s; }
+
+@keyframes kitkatFloat {
+  0%, 100% { opacity: .35; transform: translateY(0) rotate(0); }
+  50% { opacity: 1; transform: translateY(-12px) rotate(12deg); }
+}
+
+.kitkat-chocolate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: fit-content;
+  margin: 15px auto 22px;
+  padding: 18px 23px;
+  border: 1px solid #ffbd9460;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #a73532, #721b28 65%, #461523);
+  box-shadow: 0 16px 45px #00000040, 0 0 35px #ff67451c;
+  transform: rotate(-3deg);
+  animation: kitkatFloat 3.5s ease-in-out infinite;
+}
+
+.kitkat-chocolate .wafer {
+  font-size: clamp(30px, 6vw, 46px);
+  filter: drop-shadow(0 4px 4px #240b12aa);
+}
+
+.kitkat-brand {
+  color: #fff4dc;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(22px, 5vw, 34px);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -1.5px;
+  text-shadow: 2px 3px 0 #57202a;
+}
+
+.kitkat-tagline {
+  margin: 0 auto 22px;
+  max-width: 460px;
+  color: #f1d5cf;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.kitkat-note {
+  padding: 23px 20px;
+  margin: 0 auto;
+  max-width: 510px;
+  border: 1px solid #f4c49a35;
+  border-radius: 18px;
+  background: #170d1bc9;
+  box-shadow: 0 12px 35px #00000020;
+}
+
+.kitkat-note .note-title {
+  margin-bottom: 10px;
+  color: #ffd3a2;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.kitkat-note p {
+  color: #e8d8df;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.kitkat-reveal {
+  display: none;
+  margin: 18px auto 0;
+  padding: 18px;
+  max-width: 510px;
+  border: 1px solid #f4c49a40;
+  border-radius: 16px;
+  background: #351725d9;
+}
+
+.kitkat-reveal.show {
+  display: block;
+  animation: pageEnter .45s ease;
+}
+
+.kitkat-reveal p {
+  color: #ffe8ce;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+.kitkat-small {
+  margin-top: 15px;
+  color: #c9a9b4;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
 
 /* MORPANKH LETTER */
 .letter {
@@ -778,16 +916,19 @@ footer {
   .card-grid { grid-template-columns: 1fr; }
   .card { padding: 19px; }
   .home-moon { top: 13%; right: 13%; }
+
   .home-mountain.back {
     border-left-width: 45vw;
     border-right-width: 45vw;
     border-bottom-width: 32vh;
   }
+
   .home-mountain.middle {
     border-left-width: 48vw;
     border-right-width: 48vw;
     border-bottom-width: 39vh;
   }
+
   .home-mountain.front {
     left: 10%;
     border-left-width: 45vw;
@@ -795,7 +936,6 @@ footer {
     border-bottom-width: 28vh;
   }
 
-  /* Responsive layout for the new peace section only */
   .peace-content { padding-bottom: 24px; }
   .peace-choices { gap: 7px; }
   .peace-card { padding: 15px 4px; border-radius: 14px; }
@@ -803,6 +943,10 @@ footer {
   .peace-card-sub { font-size: 9px; }
   .peace-icon { font-size: 26px; }
   .peace-moon { top: 5%; right: 7%; }
+
+  .kitkat-content { padding-bottom: 24px; }
+  .kitkat-chocolate { padding: 15px 18px; }
+  .kitkat-note { padding: 20px 15px; }
 }
 
 @media (max-height: 720px) {
@@ -866,7 +1010,7 @@ footer {
     </div>
   </section>
 
-  <!-- PAGE 2: REPLACED WITH THE NEW INTERACTIVE PEACE SECTION -->
+  <!-- PAGE 2: INTERACTIVE PEACE SECTION -->
   <section class="page peace-page" id="mountains">
     <div class="peace-stars" aria-hidden="true">
       <i>✦</i><i>·</i><i>✧</i><i>·</i><i>✦</i>
@@ -1078,12 +1222,86 @@ footer {
 
       <div class="buttons">
         <button class="btn" onclick="prevPage('shinchan')">← Back</button>
-        <button class="btn primary" onclick="nextPage('letter')">One last thing… →</button>
+        <button class="btn primary" onclick="nextPage('kitkat')">A sweet little surprise →</button>
       </div>
     </div>
   </section>
 
-  <!-- PAGE 7: PERSONAL LETTER -->
+  <!-- PAGE 7: DEVI JI'S SECRET KITKAT BREAK -->
+  <section class="page" id="kitkat">
+    <div class="kitkat-glow" aria-hidden="true"></div>
+
+    <div class="kitkat-sparkles" aria-hidden="true">
+      <span>✦</span>
+      <span>✧</span>
+      <span>♡</span>
+      <span>✦</span>
+      <span>✧</span>
+    </div>
+
+    <div class="page-inner kitkat-content">
+      <div class="eyebrow">A little chocolate-sized happiness</div>
+
+      <h2>One sweet thing<br>
+        <span class="gold italic">about you.</span>
+      </h2>
+
+      <p class="kitkat-tagline">
+        Boss has her coffee, her gossip, her own rules…
+        but every queen deserves a little chocolate break.
+      </p>
+
+      <div class="kitkat-chocolate" aria-label="A KitKat-inspired chocolate surprise">
+        <span class="wafer">🍫</span>
+        <span class="kitkat-brand">KitKat</span>
+        <span class="wafer">♡</span>
+      </div>
+
+      <div class="kitkat-note">
+        <div class="note-title">Official KitKat Break for Devi Ji</div>
+        <p>
+          Dear Boss, even the strongest people deserve to pause,
+          unwrap a little happiness, and forget the world for a moment.
+        </p>
+        <p style="margin-top: 12px">
+          So here's your tiny reminder:
+          life doesn't always have to be serious.
+          Sometimes, happiness is just your favourite chocolate
+          and a few peaceful minutes to yourself.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn primary" type="button" onclick="revealKitkat()">
+          Unwrap your little surprise ♡
+        </button>
+      </div>
+
+      <div class="kitkat-reveal" id="kitkatReveal" aria-live="polite">
+        <p>
+          “Life can be a little bitter sometimes,
+          but I hope you always find your own little sweetness,
+          Devi Ji.”
+        </p>
+        <p style="margin-top: 10px">
+          One KitKat for the Boss.
+          Extra happiness for the girl behind the crown.
+        </p>
+        <div style="font-size: 28px; margin-top: 12px">🍫 ❤️ ✨</div>
+      </div>
+
+      <p class="kitkat-small">BREAK THE DAY. NOT YOUR PEACE.</p>
+
+      <div class="buttons">
+        <button class="btn" onclick="prevPage('blessings')">← Back</button>
+        <button class="btn primary" onclick="nextPage('letter')">
+          One last thing… →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 8: PERSONAL LETTER -->
   <section class="page" id="letter">
     <div class="page-inner">
       <div class="eyebrow">A letter, just for you</div>
@@ -1154,7 +1372,7 @@ footer {
 
       <div class="buttons">
         <button class="btn primary" onclick="birthdayWish()">One last birthday wish</button>
-        <button class="btn" onclick="prevPage('blessings')">← Back</button>
+        <button class="btn" onclick="prevPage('kitkat')">← Back</button>
       </div>
 
       <div class="reveal" id="finalWish">
@@ -1183,7 +1401,7 @@ footer {
 /* SECTION-BY-SECTION NAVIGATION */
 const pageIds = [
   'home', 'mountains', 'gossip', 'coffee',
-  'shinchan', 'blessings', 'letter'
+  'shinchan', 'blessings', 'kitkat', 'letter'
 ];
 
 function showPage(id) {
@@ -1213,7 +1431,7 @@ function prevPage(id) {
   showPage(id);
 }
 
-/* NEW: INTERACTIVE PEACE SECTION */
+/* INTERACTIVE PEACE SECTION */
 function choosePeace(mood, button) {
   const messages = {
     moon: {
@@ -1260,10 +1478,15 @@ function choosePeace(mood, button) {
   }
 }
 
+/* KITKAT SURPRISE */
+function revealKitkat() {
+  document.getElementById('kitkatReveal').classList.add('show');
+}
+
 function restartExperience() {
   document.getElementById('finalWish').classList.remove('show');
+  document.getElementById('kitkatReveal').classList.remove('show');
 
-  // Reset only the new section's selection when restarting.
   document.querySelectorAll('.peace-card').forEach(card => {
     card.classList.remove('selected');
     card.setAttribute('aria-pressed', 'false');
@@ -1434,7 +1657,6 @@ function playNote(frequency, duration) {
   oscillator.start(now);
   oscillator.stop(now + duration + .03);
 
-  // A soft higher note adds a little celebratory sparkle.
   if (melodyIndex % 4 === 0) {
     const sparkle = audioContext.createOscillator();
     const sparkleGain = audioContext.createGain();
@@ -1460,7 +1682,6 @@ function playNextBirthdayNote() {
   playNote(frequency, duration);
   melodyIndex = (melodyIndex + 1) % birthdayNotes.length;
 
-  // A gentle tempo with tiny gaps between notes.
   melodyTimer = setTimeout(
     playNextBirthdayNote,
     duration * 1000 + 100
